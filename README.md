@@ -26,6 +26,8 @@ npm run dev -- --open
 ```
 
 ## Building
+- [Icons installation](https://iconify.design/docs/icon-components/svelte/)
+- [Icon usage](https://icon-sets.iconify.design/material-symbols/share/)
 
 To create a production version of your app:
 
