@@ -10,8 +10,8 @@
 		<h1 class="text-heading4-medium text-light-1">Patients</h1>
 		<button
             on:click={()=> goto('/patients/add')}
-			class="button-icon text-small-regular bg-gradient-to-tr from-greenPrimary to-primary max-xs:hidden"
-			>Add patient</button
+			class="button-icon text-small-regular inline-flex items-center gap-1 bg-gradient-to-tr from-greenPrimary to-primary max-xs:hidden"
+			><Icon icon="icon-park-solid:add" /> patient</button
 		>
 		<button
 			class="button-icon text-small-regular bg-gradient-to-tr from-greenPrimary to-primary xs:hidden"

@@ -9,8 +9,8 @@
     <h1 class="text-heading4-medium text-light-1">Caregivers</h1>
     <button
         on:click={()=> goto('/patients/add')}
-        class="button-icon text-small-regular bg-gradient-to-tr from-greenPrimary to-primary max-xs:hidden"
-        >Add caregivers</button
+        class="button-icon text-small-regular inline-flex items-center gap-1 bg-gradient-to-tr from-greenPrimary to-primary max-xs:hidden"
+        ><Icon icon="icon-park-solid:add" /> caregivers</button
     >
     <button
         class="button-icon text-small-regular bg-gradient-to-tr from-greenPrimary to-primary xs:hidden"
@@ -27,5 +27,4 @@
     <CaregiverCard name="Jane Doe" username="janedoe" bio="special diet is required or special food preparations. "/>
     <CaregiverCard name="James Doe" username="jamesdoe" bio="special diet is required or special food preparations. "/>
     <CaregiverCard name="Joy Doe" username="joydoe" bio="special diet is required or special food preparations. "/>
-   
 </div>

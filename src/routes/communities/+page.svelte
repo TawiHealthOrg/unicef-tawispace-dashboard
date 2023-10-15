@@ -8,7 +8,7 @@ import CommunityCard from "../../components/cards/community/CommunityCard.svelte
 
 <div class="flex justify-between">
     <h1 class='text-heading4-medium text-light-1'>Communities</h1>
-    <button class="button-icon text-small-regular bg-gradient-to-tr from-greenPrimary to-primary max-sm:hidden">Add community</button>
+    <button class="button-icon inline-flex items-center gap-1 text-small-regular bg-gradient-to-tr from-greenPrimary to-primary max-sm:hidden"><Icon icon="icon-park-solid:add" /> community</button>
     <button class="button-icon text-small-regular bg-gradient-to-tr from-greenPrimary to-primary sm:hidden"><Icon icon="material-symbols:add" height="24" /></button>
 </div>
 <div class='mt-5'>

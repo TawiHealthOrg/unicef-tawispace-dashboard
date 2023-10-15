@@ -8,8 +8,13 @@ import Icon from '@iconify/svelte';
 <div class="caregiver-card">
 	<div class="user-card_avatar">
 		<img src={ProfileImage} alt="profile" width={48} height={48} class="rounded-full" />
+		
 		<div class="flex-1 text-ellipsis">
-			<h4 class="text-base-semibold text-light-1">{name}</h4>
+			<h4 class="text-base-semibold text-light-1">{name}
+				<span class="pl-1 text-green-400 rounded-full float-right">
+					<Icon icon="ic:round-verified" class="w-5 h-5" />
+				</span>
+			</h4>
 			<p class="text-small-medium text-gray-1">@{username}</p>
 		</div>
 	</div>
@@ -17,16 +22,16 @@ import Icon from '@iconify/svelte';
         <p class="mt-2 text-subtle-medium text-gray-1">{bio}</p>
     </div>
 	<div class="flex gap-3">
-		<button class="button-icon" on:click={() =>goto('/care-givers')}>
+		<button class="button-icon" title="more details" on:click={() =>goto('/care-givers')}>
 			<Icon icon="mdi:show" height="20" />
 		</button>
-		<button class="button-icon">
+		<button class="button-icon" title="Sent email">
 			<Icon icon="ic:baseline-email" height="20" />
 		</button>
-		<button class="button-icon" on:click={() =>goto('/care-givers')}>
+		<button class="button-icon" title="schedule appointment" on:click={() =>goto('/care-givers')}>
 			<Icon icon="ion:calendar" height="20" />
 		</button>
-		<button class="button-icon">
+		<button class="button-icon" title="start video call">
 			<Icon icon="carbon:video-filled" height="20" />
 		</button>
 	</div>
