@@ -22,6 +22,12 @@
   .activity-card {
     @apply flex items-center gap-2 rounded-md bg-dark-2 px-7 py-4;
   }
+  .tabs{
+    @apply inline-flex cursor-pointer items-center justify-center p-4 border-transparent rounded-t-lg hover:border-gray-300 hover:text-gray-300
+  }
+  .active-tab{
+    @apply inline-flex cursor-pointer items-center justify-center p-4 border-b-2 rounded-t-lg text-gray-300
+  }
 
   /* No Result */
   .no-result {
@@ -34,6 +40,12 @@
   }
   .dashboard-card {
     @apply w-full rounded-lg bg-dark-3 px-4 py-5 sm:w-1/2;
+  }
+  .form-card {
+    @apply w-full rounded-lg bg-dark-3 px-4 py-5;
+  }
+  .form-btn {
+    @apply rounded-lg bg-primary px-8 py-3 hover:bg-primary/80 transition-all duration-300 focus:outline outline-white !text-small-regular text-light-1 max-xs:w-full !important;
   }
 
   .page-notfound-card {
@@ -52,6 +64,9 @@
   /* User card */
   .user-card {
     @apply flex flex-col justify-between gap-4 max-xs:rounded-xl max-xs:bg-dark-3 max-xs:p-4 xs:flex-row xs:items-center;
+  }
+  .caregiver-card {
+    @apply inline-flex flex-col gap-4 rounded-xl bg-dark-3 p-4 items-start;
   }
   .button-icon{
     @apply bg-dark-4 p-1.5 rounded text-light-2 cursor-pointer

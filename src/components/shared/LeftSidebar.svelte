@@ -1,10 +1,11 @@
 <script lang="ts">
 import { HiSquares2X2 } from "react-icons/hi2";
 import Icon from '@iconify/svelte';
+import {page} from '$app/stores'
 
 let SidebarMenus = [
     {
-    icon: "material-symbols:dashboard-customize",
+    icon: "bxs:dashboard",
     route: "/",
     label: "Dashboard",
   },
@@ -34,16 +35,19 @@ let SidebarMenus = [
     label: "Profile",
   },
 ]
+
+$: currentPage=$page.url.pathname
 </script>
 
 <section class="custom-scrollbar leftsidebar">
     <div class="flex w-full flex-1 flex-col gap-6 px-6">
         {#each SidebarMenus as menu}
-            <a href={menu.route} class="leftsidebar_link bg-gradient-to-tr from-greenPrimary to-primary">
+            <a href={menu.route} class={ currentPage===menu.route ? 'leftsidebar_link bg-gradient-to-tr from-greenPrimary to-primary' : `leftsidebar_link`}>
                 <span class="text-white"><Icon icon={menu.icon} height={24} /></span>
                 <p class="text-light-1 max-lg:hidden">{menu.label}</p>
             </a>
         {/each}
+       
     </div>
     <!-- logout at the bottom -->
             <div class="mt-10 px-6">

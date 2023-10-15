@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Icon from "@iconify/svelte";
 	import { space } from "postcss/lib/list";
-
+  import {page} from '$app/stores'
 let SidebarMenus = [
     {
     icon: "material-symbols:dashboard-customize",
@@ -34,6 +34,8 @@ let SidebarMenus = [
     label: "Profile",
   },
 ]
+
+$: currentPage = $page.url.pathname
 </script>
 
 <section class="bottombar">
@@ -41,7 +43,7 @@ let SidebarMenus = [
       {#each SidebarMenus as menu}
          <a
             href={menu.route}
-            class="bottombar_link bg-gradient-to-tr from-greenPrimary to-primary">
+            class={`${currentPage === menu.route ? 'bottombar_link bg-gradient-to-tr from-greenPrimary to-primary' :'bottombar_link' }`}>
             <span class="text-white"><Icon icon={menu.icon} height={24} /></span>
             <p class="text-subtle-medium text-light-1 max-sm:hidden">
               {menu.label.split(/\s+./)[0]}
