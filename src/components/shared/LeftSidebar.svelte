@@ -49,13 +49,23 @@ $: currentPage=$page.url.pathname
         {/each}
        
     </div>
+  
     <!-- logout at the bottom -->
-            <div class="mt-10 px-6">
-                <div class="flex cursor-pointer gap-4 p-4">
-                    <span class="text-white " >
-                      <Icon icon="heroicons-outline:logout" height={24} />
-                    </span>
-                    <p class="text-light-2 max-lg:hidden">Logout</p>
-                </div>
-            </div>
+    <div class="mt-10 px-6">
+        <div class="flex cursor-pointer gap-4 p-4">
+            <span class="text-white " >
+              <Icon icon="heroicons-outline:logout" height={24} />
+            </span>
+            <p class="text-light-2 max-lg:hidden">Logout</p>
+        </div>
+    </div>
+    <div class="hidden lg:block">
+      <hr class="my-1 border border-gray-1 mx-8" />
+      <div class="text-center text-gray-600">
+          <p class='py-1 ' style="font-size: x-small;">
+              &copy;Tawi Health. All rights reserved. {`2021 - ${new Date().getFullYear()}`}
+
+          </p>
+      </div>
+  </div>
 </section>

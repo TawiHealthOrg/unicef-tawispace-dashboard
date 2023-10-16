@@ -75,6 +75,7 @@ import BreadCrumb from "../../../components/shared/BreadCrumb.svelte";
 						<option value="">--Select Gender--</option>
                         <option >Male</option>
                         <option >Female</option>
+                        <option >Prefer not to say</option>
 				</select>
             </div>
             <div class="mb-4">
