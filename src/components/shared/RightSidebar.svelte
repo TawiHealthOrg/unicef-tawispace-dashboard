@@ -1,26 +1,46 @@
 <script lang="ts">
+	import Icon from '@iconify/svelte';
+	import { Communities } from '../../data/SomeData'
 
 </script>
 
 <section class="custom-scrollbar rightsidebar">
     <div class="flex flex-1 flex-col justify-start">
-        <h3 class="text-heading4-medium text-light-1 pb-4">Audience Demographic</h3>
+        <h3 class=" text-light-1 pb-4">Audience Demographic</h3>
         <div class="w-full rounded-lg bg-dark-3 px-4 py-5 h-full ">
             <div class="flex flex-wrap items-center gap-3">
-                <div class="border-b pb-3 border-white">
-                    <h4 class="text-base-semibold text-light-1">{`Statistics here`}</h4>
-                </div>
+                
             </div>
         </div>
     </div>
     <div class="flex flex-1 flex-col justify-start">
-        <h3 class="text-heading4-medium text-light-1 pb-4">Registered Tawi Spaces</h3>
-        <div class="w-full rounded-lg bg-dark-3 px-4 py-5 h-full ">
-            <div class="flex flex-wrap items-center gap-3">
-                <div class="border-b pb-3 border-white">
-                    <h4 class="text-base-semibold text-light-1">{`Tawi Spaces`}</h4>
+        <h3 class="text-light-1 inline-flex items-center gap-1">New communities <Icon icon="clarity:group-solid" /></h3>
+        <p class=" text-subtle-medium text-gray-1 mb-3">Lastest Registered communities</p>
+        <div class="w-full rounded-lg space-y-1 bg-dark-3 px-2 py-3 h-full border-b-4">
+            {#each Communities.slice(0,3) as community}
+                <div title={community.name} class="flex flex-wrap hover:cursor-pointer shadow-xl p-2 bg-gray-900 hover:bg-gray-800 transition-all duration-300 rounded items-center gap-3">
+                    <article class="user-card ">
+                        <div class="user-card_avatar">
+                            <img src={community.photoURL} alt="ii" width={30} height={30} class="rounded-full" />
+                            <div class="flex-1 text-ellipsis">
+                                <h4 class="text-base-medium text-light-1">{community.name.split(/\s+./)[0]}
+                                    {#if community.verified}
+                                        <span class="text-gold rounded-full inline-flex">
+                                            <Icon icon="ic:round-verified" class="w-3 h-3" />
+                                        </span>
+                                    {/if}
+                                </h4>
+                                <p class="text-small-regular text-gray-1">@{community.username}</p>
+                            </div>
+                        </div>
+                    </article>
                 </div>
+            {/each}
+
+            <div class="py-4 text-center">
+                <a href="/communities" class="text-light-1 text-base-regular inline-flex items-center gap-1 p-2 bg-gray-700 rounded hover:bg-gray-900 transition-all duration-300 hover:scale-105"><Icon icon="carbon:view-filled" /> more</a>
             </div>
         </div>
+        
     </div>
 </section>

@@ -10,7 +10,7 @@
 	<Topbar />
     <main class="flex flex-row">
         <LeftSidebar />
-        <section class="main-container">
+        <section class="main-container ">
             <div class="w-full max-w-4xl"><slot /></div>
         </section>
         <RightSidebar />

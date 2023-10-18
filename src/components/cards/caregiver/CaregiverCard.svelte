@@ -1,21 +1,23 @@
 <script lang="ts">
 import Icon from '@iconify/svelte';
-	import ProfileImage from '../../../lib/images/assets/images/profile1.jpg';
 	import { goto } from '$app/navigation';
-    export let name:string,username:string,bio:string;
+    export let name:string,username:string,bio:string,photoURL:string,speciality:string,verified:boolean;
 </script>
 
 <div class="caregiver-card">
 	<div class="user-card_avatar">
-		<img src={ProfileImage} alt="profile" width={48} height={48} class="rounded-full" />
+		<img src={photoURL} alt="profile" width={48} height={48} class="rounded-full" />
 		
 		<div class="flex-1 text-ellipsis">
 			<h4 class="text-base-semibold text-light-1">{name}
-				<span class="pl-1 text-green-400 rounded-full float-right">
-					<Icon icon="ic:round-verified" class="w-5 h-5" />
-				</span>
+				{#if verified}
+					<span class="pl-1 text-green-400 rounded-full float-right">
+						<Icon icon="ic:round-verified" class="w-5 h-5" />
+					</span>
+				{/if}
 			</h4>
 			<p class="text-small-medium text-gray-1">@{username}</p>
+			<span class="text-x-small-semibold p-1 text-light-1 bg-greenPrimary rounded">{speciality}</span>
 		</div>
 	</div>
     <div>

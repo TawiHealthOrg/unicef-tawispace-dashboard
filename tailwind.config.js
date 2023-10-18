@@ -91,14 +91,14 @@ export default {
         },
       ],
       "base-regular": [
-        "16px",
+        "12px",
         {
           lineHeight: "140%",
           fontWeight: "400",
         },
       ],
       "base-medium": [
-        "16px",
+        "14px",
         {
           lineHeight: "140%",
           fontWeight: "500",
@@ -161,10 +161,10 @@ export default {
         },
       ],
       "x-small-semibold": [
-        "7px",
+        "10px",
         {
           lineHeight: "9.318px",
-          fontWeight: "600",
+          fontWeight: "500",
         },
       ],
     },
@@ -178,7 +178,7 @@ export default {
         others: "#0075b2",
         greenPrimary:"#358747",
         greenSecondary:"#589D46",
-        
+        gold:"#FFD700",
         blue: "#0095F6",
         "logout-btn": "#FF5A5A",
         "navbar-menu": "rgba(16, 16, 18, 0.6)",
