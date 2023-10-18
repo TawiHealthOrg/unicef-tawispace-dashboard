@@ -1,0 +1,62 @@
+name: Staging Deploy
+
+on:
+  push:
+    branches:
+      - "main"
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+  QOVERY_ENV: staging
+  QOVERY_APPLICATION_NAME: ${{ secrets.QOVERY_APPLICATION_NAME }}
+  QOVERY_ORGANIZATION: ${{ secrets.QOVERY_ORG }}
+  QOVERY_PROJECT_NAME: ${{ secrets.QOVERY_PROJECT_NAME }}
+  QOVERY_CLI_ACCESS_TOKEN: ${{ secrets.QOVERY_CLI_ACCESS_TOKEN }}
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        uses: actions/checkout@master
+      - name: Cache web node modules
+        uses: actions/cache@master
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+      - name: Login to GHCR
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=sha
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+      - name: Qovery Deploy
+        run: |
+          curl -s https://get.qovery.com | bash
+          qovery application deploy \
+            --organization "${{ env.QOVERY_ORGANIZATION }}" \
+            --project "${{ env.QOVERY_PROJECT_NAME }}" \
+            --environment "${{ env.QOVERY_ENV }}" \
+            --application "${{ env.QOVERY_APPLICATION_NAME }}" \
+            --commit-id ${{ github.sha }}
+        shell: bash
