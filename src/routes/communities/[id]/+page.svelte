@@ -1,16 +1,14 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
 	import BreadCrumb from '../../../components/shared/BreadCrumb.svelte';
-	import ProfileTab from '../../../components/cards/patient/patient-tabs/ProfileTab.svelte';
-	import CommunitiesTab from '../../../components/cards/patient/patient-tabs/CommunitiesTab.svelte';
-	import PatientContact from '../../../components/cards/patient/patient-tabs/PatientContact.svelte';
-	import PatientSettingTab from '../../../components/cards/patient/patient-tabs/PatientSettingTab.svelte';
+	import CommunityPageInfo from '../../../components/cards/community/communityTabs/CommunityPageInfo.svelte';
+	import CommunityMembers from '../../../components/cards/community/communityTabs/CommunityMembers.svelte';
+	import CommunityPosts from '../../../components/cards/community/communityTabs/CommunityPosts.svelte';
 
 	let Tabs = [
-		{ title: 'Page Info', icon: 'gg:profile', content:ProfileTab },
-		{ title: 'Members', icon: 'clarity:group-solid', content: CommunitiesTab },
-        { title: 'Posts', icon: 'fluent:contact-card-16-filled', content: PatientContact },
-		{ title: 'Settings', icon: 'ic:baseline-settings', content: PatientSettingTab }
+		{ title: 'Page Info', icon: 'gg:profile', content:CommunityPageInfo },
+		{ title: 'Members', icon: 'clarity:group-solid', content: CommunityMembers },
+        { title: 'Posts', icon: 'fluent:contact-card-16-filled', content: CommunityPosts },
 	];
 
 	let activeTab = Tabs[0].title;

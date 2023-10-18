@@ -7,7 +7,7 @@
 		datasets: [
 			{
 				label: 'Statistics by age groups',
-				data: [234, 320, 10, 102, 240],
+				data: [234,10,320, 140],
 				backgroundColor: ['#7000e1', '#fc8800', '#358747', '#00b0e8', '#FFD700'],
 				hoverOffset: 4,
 				borderWidth: 1,

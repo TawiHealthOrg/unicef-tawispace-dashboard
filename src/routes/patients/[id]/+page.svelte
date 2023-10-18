@@ -4,15 +4,13 @@
 	import BreadCrumb from '../../../components/shared/BreadCrumb.svelte';
 	import ProfileTab from '../../../components/cards/patient/patient-tabs/ProfileTab.svelte';
 	import CommunitiesTab from '../../../components/cards/patient/patient-tabs/CommunitiesTab.svelte';
-	import PatientContact from '../../../components/cards/patient/patient-tabs/PatientContact.svelte';
 	import PatientSettingTab from '../../../components/cards/patient/patient-tabs/PatientSettingTab.svelte';
+	import { Patients } from '../../../data/SomeData';
 
 	let Tabs = [
-		{ title: 'Profile', icon: 'gg:profile', content:ProfileTab },
+		{ title: 'Profile', icon: 'gg:profile', content: ProfileTab },
 		{ title: 'Communities', icon: 'clarity:group-solid', content: CommunitiesTab },
-        { title: 'Contacts', icon: 'fluent:contact-card-16-filled', content: PatientContact },
 		{ title: 'Settings', icon: 'ic:baseline-settings', content: PatientSettingTab }
-		
 	];
 
 	let activeTab = Tabs[0].title;
@@ -32,8 +30,14 @@
 		/>
 	</div>
 	<div>
-        <ProfileCardHeader />
-    </div>
+		{#each Patients.slice(0, 1) as patient}
+			<ProfileCardHeader
+				profileURL={patient.photoURL}
+				firstName={patient.firstName}
+				lastName={patient.lastName}
+			/>
+		{/each}
+	</div>
 	<div class="mt-9">
 		<div class="border-b border-gray-200 dark:border-gray-700">
 			<ul
@@ -55,8 +59,9 @@
 		</div>
 		{#each Tabs as tab}
 			{#if activeTab === tab.title}
-				<div class="text-light-1">
-                    <svelte:component this={tab.content}/>
+				<div class="text-light-1 py-3">
+					<svelte:component this={tab.content} />
+						
 				</div>
 			{/if}
 		{/each}

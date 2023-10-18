@@ -111,3 +111,76 @@ export const Communities =[
     }
     
 ]
+
+export const Patients = [
+    {
+        id:1,
+        firstName:"Virginia",
+        lastName:" Kring",
+        emailAddress:"virginia234@gmail.com",
+        phoneNumber:"+254790445585",
+        identityNumber:"44559905",
+        photoURL:"https://www.fakenamegenerator.com/images/sil-female.png",
+        yearOfBirth:"November 7, 1987",
+        country:"Kenya",
+        weight:"87",
+        gender:"Female",
+        bloodType:"AB"
+    },
+    {
+        id:2,
+        firstName:"Douglas P. ",
+        lastName:"Brown",
+        emailAddress:"dbrown2032@gmail.com",
+        phoneNumber:"+254790443425",
+        identityNumber:"09849905",
+        photoURL:"https://www.fakenamegenerator.com/images/sil-male.png",
+        yearOfBirth:"September 17, 1996",
+        country:"Kenya",
+        weight:"59",
+        gender:"Male",
+        bloodType:"A+"
+    },
+    {
+        id:3,
+        firstName:"David",
+        lastName:"Maldonado",
+        emailAddress:"david20@gmail.com",
+        phoneNumber:"+2547894484844",
+        identityNumber:"33655005",
+        photoURL:"https://www.fakenamegenerator.com/images/sil-male.png",
+        yearOfBirth:"January 17, 1997",
+        country:"Kenya",
+        weight:"67",
+        gender:"Male",
+        bloodType:"B-"
+    },
+    {
+        id:4,
+        firstName:"Henry",
+        lastName:"Shand",
+        emailAddress:"henrysh@gmail.com",
+        phoneNumber:"+25470988764",
+        identityNumber:"34655005",
+        photoURL:"https://source.boringavatars.com/marble",
+        yearOfBirth:"January 07, 1999",
+        country:"Kenya",
+        weight:"48",
+        gender:"Male",
+        bloodType:"AB"
+    },
+    {
+        id:4,
+        firstName:"Henry",
+        lastName:"Shand",
+        emailAddress:"henrysh@gmail.com",
+        phoneNumber:"+25470988764",
+        identityNumber:"34655005",
+        photoURL:"https://source.boringavatars.com/marble",
+        yearOfBirth:"January 07, 1999",
+        country:"Kenya",
+        weight:"48",
+        gender:"Male",
+        bloodType:"AB"
+    }   
+]
