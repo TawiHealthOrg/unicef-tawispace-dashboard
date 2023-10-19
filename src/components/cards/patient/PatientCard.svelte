@@ -11,7 +11,7 @@
 				<img src={photoURL} alt={firstName} class="rounded-full w-10 h-10" />
 				<div class="flex-1 text-ellipsis">
 					<h4 class="text-small-medium text-light-1">{`${firstName} ${lastName}`}</h4>
-					<p class="text-small-regular text-gray-1">@{lastName}</p>
+					<p class="text-small-regular text-gray-1">@{lastName.toLowerCase()}</p>
 				</div>
 			</div>
 		</a>

@@ -9,10 +9,10 @@
 			baseName="Tawispace"
 			parentLink="/patients"
 			parentName="Patient"
-			childName="Schedule Appointment"
+			childName="re-schedule Appointment"
 		/>
 		<div class="py-4 hidden md:block">
-			<p class="text-small-medium text-gray-1">Schedule appointment with patients.</p>
+			<p class="text-small-medium text-gray-1">Re-schedule appointment with patients.</p>
 		</div>
 	</div>
 	<div class="form-card">

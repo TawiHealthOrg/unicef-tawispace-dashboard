@@ -9,14 +9,14 @@ import Icon from '@iconify/svelte';
 		<img src={photoURL} alt="profile" width={48} height={48} class="rounded-full" />
 		
 		<div class="flex-1 text-ellipsis">
-			<h4 class="text-base-semibold text-light-1">{name}
+			<h4 class="text-small-medium text-light-1">{name}
 				{#if verified}
 					<span class="pl-1 text-green-400 rounded-full float-right">
 						<Icon icon="ic:round-verified" class="w-5 h-5" />
 					</span>
 				{/if}
 			</h4>
-			<p class="text-small-medium text-gray-1">@{username}</p>
+			<p class="text-small-medium text-gray-1">@{username.toLowerCase()}</p>
 			<span class="text-x-small-semibold p-1 text-light-1 bg-greenPrimary rounded">{speciality}</span>
 		</div>
 	</div>

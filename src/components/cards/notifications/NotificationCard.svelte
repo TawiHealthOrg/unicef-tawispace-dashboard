@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
-    import ProfileImage from '../../../lib/images/assets/images/profile1.jpg';
+    export let ProfileImage:string,communityName:string,activityDescription:string,time:string
 </script>
 <article class="flex w-full flex-col rounded-xl bg-dark-2 p-7">
     <div class="flex items-start justify-between">
@@ -17,11 +17,11 @@
         <div class="flex w-full flex-col">
           <a href={`/profile/1`} class="">
             <h4 class="cursor-pointer text-base-semibold text-light-1">
-              John Doe
+              {communityName}
             </h4>
           </a>
           <p class="mt-2 text-small-regular text-light-2">
-            This is my first post
+            {activityDescription}
           </p>
           <div class="mt-5 flex flex-col gap-3">
             <div class="flex gap-3.5">
@@ -40,7 +40,8 @@
             </div>
           </div>
           <a href="/communities/1" class="mt-5 items-center"> 
-            <p class="text-subtle-medium text-gray-1">Posted by,{` KNH Nairobi Group`}</p>
+            <p class="text-subtle-medium text-gray-1">Posted by,{communityName}</p>
+            <p class="text-x-small-semibold inline-flex items-center gap-1 text-gray-1"><span><Icon icon="ri:time-line" /></span>{time}</p>
           </a>
         </div>
       </div>

@@ -5,7 +5,7 @@
 
 <section class="text-light-1 dashboard-card w-full">
     {#each Patients.slice(0, 1)  as patient}
-    <div class="grid grid-cols-2">
+    <div class="grid md:grid-cols-2 gap-4">
         <div class="">
             <h2 class="text-small-medium">Profile Information</h2>  
             <div class="my-4 grid space-y-2">
