@@ -36,7 +36,7 @@ export const Caregivers = [
         firstName: "Dominic",
         lastName: "Stephens",
         speciality: "Peer Adherence Counsellor",
-        bio: "Exlore and helps patients struggling HIV related issues.",
+        bio: "Explore and helps patients struggling HIV related issues.",
         verified:false
     },
     {
@@ -47,7 +47,7 @@ export const Caregivers = [
         lastName: "MaryAnn",
         speciality: "Mental Health Expert",
         bio: "Helps patients struggling mental health related issues.",
-        verified:false
+        verified:true
     },
     {
         id: "5c52850b-78e4-4672-9029-6f5a94b8f46f",
@@ -57,7 +57,7 @@ export const Caregivers = [
         lastName: "Faith",
         speciality: "Psychiatrist",
         bio: "Specialist in treatment of mental health related issues.",
-        verified:false
+        verified:true
     }
 ]
 

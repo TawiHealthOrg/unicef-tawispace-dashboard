@@ -1,15 +1,17 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
 	import { Communities } from '../../data/SomeData'
+	import SectionAge from '../dashboard/Section-Age.svelte';
+	import SectionCounties from '../dashboard/Section-Counties.svelte';
 
 </script>
 
 <section class="custom-scrollbar rightsidebar">
     <div class="flex flex-1 flex-col justify-start">
-        <h3 class=" text-light-1 pb-4">Audience Demographic</h3>
+        <h3 class=" text-light-1 inline-flex items-center gap-1 pb-4">Youth Demographic <Icon icon="ph:graph" /></h3>
         <div class="w-full rounded-lg bg-dark-3 px-4 py-5 h-full ">
             <div class="flex flex-wrap items-center gap-3">
-                
+               <SectionAge />
             </div>
         </div>
     </div>

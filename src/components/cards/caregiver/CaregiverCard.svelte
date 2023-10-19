@@ -17,10 +17,10 @@ import Icon from '@iconify/svelte';
 				{/if}
 			</h4>
 			<p class="text-small-medium text-gray-1">@{username.toLowerCase()}</p>
-			<span class="text-x-small-semibold p-1 text-light-1 bg-greenPrimary rounded">{speciality}</span>
+			<div class="text-x-small-semibold p-1 text-light-1 bg-greenPrimary rounded">{speciality}</div>
 		</div>
 	</div>
-    <div>
+    <div class="hidden lg:block">
         <p class="mt-2 text-subtle-medium text-gray-1">{bio}</p>
     </div>
 	<div class="flex gap-3">
