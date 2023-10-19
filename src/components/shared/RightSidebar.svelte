@@ -3,7 +3,6 @@
 	import { Communities } from '../../data/SomeData'
 	import SectionAge from '../dashboard/Section-Age.svelte';
 	import SectionCounties from '../dashboard/Section-Counties.svelte';
-
 </script>
 
 <section class="custom-scrollbar rightsidebar">

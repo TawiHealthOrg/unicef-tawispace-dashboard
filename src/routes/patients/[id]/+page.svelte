@@ -26,7 +26,7 @@
 			baseName="Tawispace"
 			parentName="Patients"
 			parentLink="/patients"
-			childName="John Doe"
+			childName="Virginia Kring"
 		/>
 	</div>
 	<div>
