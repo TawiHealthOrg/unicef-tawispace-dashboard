@@ -25,9 +25,7 @@
 	<div class="mt-10 flex flex-col gap-5">
 		{#each Patients as patient}
 			<PatientCard
-				firstName={patient.firstName}
-				lastName={patient.lastName}
-				photoURL={patient.photoURL}
+				{...patient} 
 			/>
 		{/each}
 	</div>

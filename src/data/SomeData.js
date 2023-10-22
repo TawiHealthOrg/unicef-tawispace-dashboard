@@ -1,6 +1,6 @@
 export const Caregivers = [
     {
-        id: "5c52850b-78e4-4672-9029-6f5a94b8f46f",
+        id:1,
         photoURL: "https://source.boringavatars.com/marble",
         phoneNumber: "+254725108447",
         firstName: "Dominic",
@@ -10,27 +10,27 @@ export const Caregivers = [
         verified:true
     },
     {
-        "id": "5c52850b-78e4-4672-9029-6f5a94b8f46f",
-        "photoURL": "https://source.boringavatars.com/bauhaus",
-        "phoneNumber": "+254712096002",
-        "firstName": "Robert",
-        "lastName": "Fischer",
-        "speciality": "Gynecologist",
-        "bio": "With over 15 years in medical field. Robert is specialist in female reproductive health. ",
+        id:2,
+        photoURL: "https://source.boringavatars.com/bauhaus",
+        phoneNumber: "+254712096002",
+        firstName: "Robert",
+        lastName: "Fischer",
+        speciality: "Gynecologist",
+        bio: "With over 15 years in medical field. Robert is specialist in female reproductive health. ",
         verified:false
     },
     {
-        "id": "5c52850b-78e4-4672-9029-6f5a94b8f46f",
-        "photoURL": "https://source.boringavatars.com/pixel",
-        "phoneNumber": "+254725108447",
-        "firstName": "Mal",
-        "lastName": "Cobb",
-        "speciality": "Peer Adolescent Counsellor",
-        "bio": "Provide peer support for youths experiencing stress, anxiety, sadness, relationship concerns, and academic struggles ",
+        id:3,
+        photoURL: "https://source.boringavatars.com/pixel",
+        phoneNumber: "+254725108447",
+        firstName: "Mal",
+        lastName: "Cobb",
+        speciality: "Peer Adolescent Counsellor",
+        bio: "Provide peer support for youths experiencing stress, anxiety, sadness, relationship concerns, and academic struggles ",
         verified:true
     },
     {
-        id: "5c52850b-78e4-4672-9029-6f5a94b8f46f",
+        id:4,
         photoURL: "https://source.boringavatars.com/sunset",
         phoneNumber: "+254725108447",
         firstName: "Dominic",
@@ -40,7 +40,7 @@ export const Caregivers = [
         verified:false
     },
     {
-        id: "5c52850b-78e4-4672-9029-6f5a94b8f46f",
+        id:5,
         photoURL: "https://source.boringavatars.com/ring",
         phoneNumber: "+254725108447",
         firstName: "Koech",
@@ -50,7 +50,7 @@ export const Caregivers = [
         verified:true
     },
     {
-        id: "5c52850b-78e4-4672-9029-6f5a94b8f46f",
+        id:6,
         photoURL: "https://source.boringavatars.com/beam",
         phoneNumber: "+254725108447",
         firstName: "Noel",
@@ -71,6 +71,7 @@ export const Communities =[
         description: "Kenyatta National HIV community help groups. ",
         location: "Nairobi County",
         postalAddress:"102-400",
+        email:"knhgroup@gmail.com",
         verified: true
     },
     {
@@ -82,6 +83,7 @@ export const Communities =[
         description: "Offers general healthcare guidance and services. Preventive measures on healthy life. ",
         location: "Nakuru County",
         postalAddress:"0209-40300",
+        email:"allcaregroup@gmail.com",
         verified: true
     },
     {
@@ -93,6 +95,7 @@ export const Communities =[
         description: "Lifeline group helps affected youths in learning vocational trainings. ",
         location: "Nakuru County",
         postalAddress:"102-40890",
+        email:"lifelinegroup@gmail.com",
         verified:false
     },
     {
@@ -103,6 +106,7 @@ export const Communities =[
         username:"peakperf",
         description: "The process is smoother. Steps load faster.Engaging youths in sports activities. ",
         location: "Nakuru County",
+        email:"peakperfgroup@gmail.com",
         verified: true,
         postalAddress:"1002-44500",
     },
@@ -114,7 +118,9 @@ export const Communities =[
         username:"boghealthdose",
         description: "Provide health awareness on HIV/AIDs and common best practices. ",
         location: "Nakuru County",
+        email:"healthdose@gmail.com",
         postalAddress:"19102-44300",
+        verified:false
     },
     {
         id: 6,
@@ -124,6 +130,7 @@ export const Communities =[
         username:"elitegroup",
         description: "Offers learning on medication and health related prevention measures. ",
         location: "Eldoret Town",
+        email:"elitegroup@gmail.com",
         verified: true,
         postalAddress:"1023-23400",
     },
@@ -135,7 +142,9 @@ export const Communities =[
         username:"healthwellness",
         description: "Group for wellness, mental healthcare givers and Adolescent persons.",
         location: "Kiambu County",
+        email:"healthcaregroup@gmail.com",
         postalAddress:"1102-40040",
+        verified:false
     }
     
 ]

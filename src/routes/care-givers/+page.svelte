@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { goto } from '$app/navigation';
 	import Icon from '@iconify/svelte';
 	import SearchCard from '../../components/cards/patient/SearchCard.svelte';
@@ -24,12 +24,7 @@
 <div class="mt-10 grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-5">
 	{#each Caregivers as caregiver}
 		<CaregiverCard
-			photoURL={caregiver.photoURL}
-			name={`${caregiver.firstName} ${caregiver.lastName}`}
-			speciality={caregiver.speciality}
-			username={caregiver.firstName}
-			bio={caregiver.bio}
-            verified={caregiver.verified}
+			{...caregiver}
 		/>
 	{/each}
 </div>
